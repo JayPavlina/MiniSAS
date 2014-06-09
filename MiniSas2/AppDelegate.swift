@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ExplodingKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+        var test = ~["what", "is","up?"]
+        print(test.indexOf("is"))
+        var something = EquatableArray<String>(["adsf"])
         // Override point for customization after application launch.
         return true
     }

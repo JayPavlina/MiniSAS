@@ -1,13 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cO7-Ge-iyU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
+        <!--View Controller - Battle Details-->
+        <scene sceneID="MMD-zY-BQ5">
+            <objects>
+                <viewController title="Battle Details" id="ZTo-ht-fPD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HAM-SY-xWj"/>
+                        <viewControllerLayoutGuide type="bottom" id="2D0-ab-fJc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JVA-AH-7CI">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="showDetail" identifier="poop" id="36R-XW-a6f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W83-91-yAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="421"/>
+        </scene>
+        <!--Battles Table View Controller-->
+        <scene sceneID="Oue-vc-3lA">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="CDO-1Y-z2v" customClass="BattlesTableViewController" customModule="MiniSas2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1YP-4f-XQy">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="battlePrototypeCell" textLabel="4ad-bw-r6i" style="IBUITableViewCellStyleDefault" id="KnO-zk-aJm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KnO-zk-aJm" id="wso-tk-Llp">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ad-bw-r6i">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CDO-1Y-z2v" id="kRx-yl-352"/>
+                            <outlet property="delegate" destination="CDO-1Y-z2v" id="5uy-Sf-tXq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PjR-PQ-oFN">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="Battles" id="63F-43-mZj"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="PwK-FD-yqO">
+                            <connections>
+                                <action selector="didPressBackButton:" destination="CDO-1Y-z2v" id="Tnj-Ik-rTD"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ueu-8f-v5f">
+                            <rect key="frame" x="144" y="7" width="192" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nOh-R1-H2d">
+                            <connections>
+                                <segue destination="f7S-f2-Bmw" kind="showDetail" id="COl-cp-V14"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WrI-ax-u0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="-112"/>
+        </scene>
+        <!--View Controller - New Battle-->
+        <scene sceneID="ISn-RE-1eJ">
+            <objects>
+                <viewController title="New Battle" id="f7S-f2-Bmw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BuU-1l-oIf"/>
+                        <viewControllerLayoutGuide type="bottom" id="kAm-xi-8aV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UBH-yn-Pgg">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eT0-bM-V3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2986" y="-114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PSH-zX-ml5">
+            <objects>
+                <navigationController id="oRt-Mz-NT6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FZD-XV-Lkd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CDO-1Y-z2v" kind="relationship" relationship="rootViewController" id="3vu-XW-J6Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wK-em-cG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="-114"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="jeE-42-jN1">
+            <objects>
+                <splitViewController id="otX-U8-dDA" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="oRt-Mz-NT6" kind="relationship" relationship="masterViewController" id="xau-ss-mWK"/>
+                        <segue destination="ZTo-ht-fPD" kind="relationship" relationship="detailViewController" id="dfl-RD-Wb4"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9c-Us-R7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="152"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="MiniSas2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
                         <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
@@ -15,11 +142,48 @@
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2316" y="421"/>
+        </scene>
+        <!--View Controller - Title Screen-->
+        <scene sceneID="fll-Ui-kUK">
+            <objects>
+                <viewController title="Title Screen" id="cO7-Ge-iyU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d06-Qt-GJP"/>
+                        <viewControllerLayoutGuide type="bottom" id="pL5-Hb-skJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bod-Ws-5ri">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-Xe-lbu">
+                                <rect key="frame" x="216" y="79" width="48" height="30"/>
+                                <state key="normal" title="Battles">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="otX-U8-dDA" kind="show" id="fhR-Oj-r1F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="xdW-Xe-lbu" secondAttribute="centerY" constant="146" id="3OS-qB-JhD"/>
+                            <constraint firstAttribute="centerX" secondItem="xdW-Xe-lbu" secondAttribute="centerX" id="BAr-zt-XHY"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8if-mH-0ng"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zp-23-fzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248" y="155"/>
         </scene>
     </scenes>
 </document>
