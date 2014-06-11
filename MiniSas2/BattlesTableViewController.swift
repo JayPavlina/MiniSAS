@@ -18,10 +18,9 @@ class BattlesTableViewController: UITableViewController {
 //        super.init(style: style)
         // Custom initialization
 //    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        splitViewController.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        splitViewController.preferredDisplayMode = .AllVisible
     }
 
     override func viewDidLoad() {

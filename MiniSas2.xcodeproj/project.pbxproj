@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69000B6A1946DBFE001D3419 /* BattlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69000B691946DBFE001D3419 /* BattlesViewController.swift */; };
 		69054B5019442E110014EC46 /* BattlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69054B4F19442E110014EC46 /* BattlesTableViewController.swift */; };
 		69078E3D19467A4A00B4B361 /* ExplodingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 69078E3C19467A4A00B4B361 /* ExplodingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69078E4319467A4A00B4B361 /* ExplodingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69078E3819467A4A00B4B361 /* ExplodingKit.framework */; };
@@ -16,6 +17,8 @@
 		69078E6019467A6900B4B361 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69078E5D19467A6900B4B361 /* EquatableArray.swift */; };
 		69078E6119467A6900B4B361 /* JayMulticastClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69078E5E19467A6900B4B361 /* JayMulticastClosure.swift */; };
 		69078E6219467A6900B4B361 /* JessyMulticastClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69078E5F19467A6900B4B361 /* JessyMulticastClosure.swift */; };
+		69298A7E1947C0FD00D5BC48 /* BattlesSplitViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69298A7D1947C0FD00D5BC48 /* BattlesSplitViewControllerDelegate.swift */; };
+		69298A801947CFD100D5BC48 /* BattleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69298A7F1947CFD100D5BC48 /* BattleDetailsViewController.swift */; };
 		694FD86D1946953100DAAD50 /* HashSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694FD86C1946953100DAAD50 /* HashSet.swift */; };
 		6964681D1942A33A003986C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6964681C1942A33A003986C1 /* AppDelegate.swift */; };
 		6964681F1942A33A003986C1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6964681E1942A33A003986C1 /* GameScene.sks */; };
@@ -101,6 +104,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		69000B691946DBFE001D3419 /* BattlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattlesViewController.swift; sourceTree = "<group>"; };
 		69054B4F19442E110014EC46 /* BattlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattlesTableViewController.swift; sourceTree = "<group>"; };
 		69078E3819467A4A00B4B361 /* ExplodingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExplodingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69078E3B19467A4A00B4B361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 		69078E5D19467A6900B4B361 /* EquatableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableArray.swift; sourceTree = "<group>"; };
 		69078E5E19467A6900B4B361 /* JayMulticastClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JayMulticastClosure.swift; sourceTree = "<group>"; };
 		69078E5F19467A6900B4B361 /* JessyMulticastClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JessyMulticastClosure.swift; sourceTree = "<group>"; };
+		69298A7D1947C0FD00D5BC48 /* BattlesSplitViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattlesSplitViewControllerDelegate.swift; sourceTree = "<group>"; };
+		69298A7F1947CFD100D5BC48 /* BattleDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleDetailsViewController.swift; sourceTree = "<group>"; };
 		694FD86C1946953100DAAD50 /* HashSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashSet.swift; sourceTree = "<group>"; };
 		696468171942A33A003986C1 /* MiniSas2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSas2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6964681B1942A33A003986C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,8 +172,11 @@
 		69054B4E19442DE80014EC46 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				69298A7C1947C0DD00D5BC48 /* Delegates */,
 				696468221942A33A003986C1 /* GameViewController.swift */,
 				69054B4F19442E110014EC46 /* BattlesTableViewController.swift */,
+				69000B691946DBFE001D3419 /* BattlesViewController.swift */,
+				69298A7F1947CFD100D5BC48 /* BattleDetailsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -230,6 +239,14 @@
 				69EDCDB41943B046007FAACE /* Playground.playground */,
 			);
 			name = Playgrounds;
+			sourceTree = "<group>";
+		};
+		69298A7C1947C0DD00D5BC48 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				69298A7D1947C0FD00D5BC48 /* BattlesSplitViewControllerDelegate.swift */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		694FD86A1946950F00DAAD50 /* Containers */ = {
@@ -518,8 +535,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69298A7E1947C0FD00D5BC48 /* BattlesSplitViewControllerDelegate.swift in Sources */,
 				696468211942A33A003986C1 /* GameScene.swift in Sources */,
 				696468231942A33A003986C1 /* GameViewController.swift in Sources */,
+				69000B6A1946DBFE001D3419 /* BattlesViewController.swift in Sources */,
+				69298A801947CFD100D5BC48 /* BattleDetailsViewController.swift in Sources */,
 				69054B5019442E110014EC46 /* BattlesTableViewController.swift in Sources */,
 				6964681D1942A33A003986C1 /* AppDelegate.swift in Sources */,
 			);
