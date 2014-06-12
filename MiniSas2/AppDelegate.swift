@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ExplodingKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,20 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        var test = ~["what", "is","up?"]
-        println(test.indexOf("is"))
-        var something = EquatableArray<String>(["adsf"])
-        var hash = HashSet(["one", "two", "three"])
-        for item in hash{
-            println(item)
-        }
-        println(hash.contains("two"))
-        hash.remove("two")
-        println(hash.contains("two"))
-        hash.add("asdfasdfasfd")
-        println(hash.count)
-        
-        // Override point for customization after application launch.
+//        cloudManager.saveBattleRecord(<#battleRecord: BattleRecord#>)()
         return true
     }
 
